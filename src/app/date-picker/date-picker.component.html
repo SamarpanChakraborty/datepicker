@@ -1,7 +1,7 @@
 <div [ngClass]="{'dp-open': areCalendarsShown}">
-    <div class="dp-input-container" [hidden]="componentConfig.hideInputContainer" [attr.data-hidden]="componentConfig.hideInputContainer">
+    <!-- <div class="dp-input-container" [hidden]="componentConfig.hideInputContainer" [attr.data-hidden]="componentConfig.hideInputContainer">
         <input type="text" class="dp-picker-input" [placeholder]="placeholder" [ngModel]="inputElementValue" (ngModelChange)="onViewDateChange($event)" (focus)="inputFocused()" [readonly]="componentConfig.disableKeypress" [disabled]="disabled" />
-    </div>
+    </div> -->
     <div #container>
         <div class="dp-popup {{theme?theme:'dp-material dp-main'}}" [ngSwitch]="mode" [hidden]="!_areCalendarsShown" [attr.data-hidden]="!_areCalendarsShown">
             <dp-day-calendar #dayCalendar *ngSwitchCase="'day'" [config]="dayCalendarConfig" [ngModel]="_selected" [displayDate]="displayDate" [theme]="theme" (onSelect)="dateSelected($event, 'day')" (onGoToCurrent)="GoToCurrent($event,'day')" (onLeftNav)="onLeftNavClick($event)"

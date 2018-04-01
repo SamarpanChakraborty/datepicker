@@ -173,19 +173,19 @@ export class DemoComponent {
     }
   ];
 
-  formGroup: FormGroup = new FormGroup({
-    datePicker: new FormControl({value: this.date, disabled: this.disabled}, [
-      this.required ? Validators.required : () => undefined,
-      control => this.validationMinDate && this.config &&
-      moment(control.value, this.config.format || this.getDefaultFormatByMode(this.pickerMode))
-        .isBefore(this.validationMinDate)
-        ? {minDate: 'minDate Invalid'} : undefined,
-      control => this.validationMaxDate && this.config &&
-      moment(control.value, this.config.format || this.getDefaultFormatByMode(this.pickerMode))
-        .isAfter(this.validationMaxDate)
-        ? {maxDate: 'maxDate Invalid'} : undefined
-    ])
-  });
+  // formGroup: FormGroup = new FormGroup({
+  //   datePicker: new FormControl({value: this.date, disabled: this.disabled}, [
+  //     this.required ? Validators.required : () => undefined,
+  //     control => this.validationMinDate && this.config &&
+  //     moment(control.value, this.config.format || this.getDefaultFormatByMode(this.pickerMode))
+  //       .isBefore(this.validationMinDate)
+  //       ? {minDate: 'minDate Invalid'} : undefined,
+  //     control => this.validationMaxDate && this.config &&
+  //     moment(control.value, this.config.format || this.getDefaultFormatByMode(this.pickerMode))
+  //       .isAfter(this.validationMaxDate)
+  //       ? {maxDate: 'maxDate Invalid'} : undefined
+  //   ])
+  // });
 
   config: IDatePickerConfig = {
     firstDayOfWeek: 'su',
@@ -235,18 +235,8 @@ export class DemoComponent {
     this.isAtTop = document.body.scrollTop === 0;
   }
 
-  modeChanged(mode) {
-    this.pickerMode = mode;
-    this.config.hideInputContainer = false;
-    this.config.inputElementContainer = undefined;
-    this.formGroup.get('datePicker').setValue(this.date);
-
-    this.gaService.emitEvent('Navigation', mode);
-  }
-
-  validatorsChanged() {
-    this.formGroup.get('datePicker').updateValueAndValidity();
-  }
+  
+  
 
   refreshDemo() {
     this.showDemo = false;
