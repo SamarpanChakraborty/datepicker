@@ -219,7 +219,7 @@ export class DemoComponent {
     multipleYearsNavigateBy: 10,
     showMultipleYearsNavigation: false,
     locale: moment.locale(),
-    hideInputContainer: false,
+    hideInputContainer: true,
     returnedValueType: ECalendarValue.String,
     unSelectOnClick: true,
     hideOnOutsideClick: true

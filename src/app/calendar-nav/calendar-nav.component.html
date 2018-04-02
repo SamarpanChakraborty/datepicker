@@ -1,7 +1,8 @@
 <div class="dp-calendar-nav-container">
     <div class="dp-nav-btns-container" style="float: left; left:5px;">
         <div class="dp-calendar-nav-container-left">
-            <button type="button" class="dp-calendar-secondary-nav-left" *ngIf="showLeftSecondaryNav" [disabled]="leftSecondaryNavDisabled" (click)="leftSecondaryNavClicked()">
+            <button type="button" class="btn btn-link" *ngIf="showLeftSecondaryNav" [disabled]="leftSecondaryNavDisabled" (click)="leftSecondaryNavClicked()">
+                    <span class="dp-navigation-chevron"></span>
       </button>
             <button type="button" class="btn btn-link" [hidden]="!showLeftNav" [attr.data-hidden]="!showLeftNav" [disabled]="leftNavDisabled" (click)="leftNavClicked()">
                 <span class="dp-navigation-chevron"></span>
@@ -20,7 +21,8 @@
             <button type="button" class="btn btn-link" [hidden]="!showRightNav" [attr.data-hidden]="!showRightNav" [disabled]="rightNavDisabled" (click)="rightNavClicked()">
                     <span class="dp-navigation-chevron"></span>
       </button>
-            <button type="button" class="dp-calendar-secondary-nav-right" *ngIf="showRightSecondaryNav" [disabled]="rightSecondaryNavDisabled" (click)="rightSecondaryNavClicked()">
+            <button type="button" class="btn btn-link" *ngIf="showRightSecondaryNav" [disabled]="rightSecondaryNavDisabled" (click)="rightSecondaryNavClicked()">
+                    <span class="dp-navigation-chevron"></span>
       </button>
         </div>
     </div>

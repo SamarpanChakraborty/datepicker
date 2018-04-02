@@ -253,7 +253,11 @@ Validator {
       .dayCalendarService
       .getDayBtnText(this.componentConfig, day.date);
   }
-
+  getDayBtnTitle(day) : string {
+    return day
+      .date
+      .toString();
+  }
   getDayBtnCssClass(day : IDay) : {
     [klass : string]: boolean
   }
@@ -391,7 +395,9 @@ Validator {
     let day : IDay = currentWeek[0][0];
     this.currentDateView = moment();
     day.date = this.currentDateView;
-    this.onGoToCurrent.emit(day);
+    this
+      .onGoToCurrent
+      .emit(day);
   }
   closebtn() {
     this

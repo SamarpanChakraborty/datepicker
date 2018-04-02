@@ -11,7 +11,7 @@
         <div class="dp-calendar-week" *ngFor="let week of weeks">
             <span class="dp-week-number" *ngIf="componentConfig.showWeekNumbers" [innerText]="week[0].date.isoWeek()">
       </span>
-            <button type="button" class="dp-calendar-day" *ngFor="let day of week" [attr.data-date]="day.date.format(componentConfig.format)" (click)="dayClicked(day)" [disabled]="day.disabled" [ngClass]="getDayBtnCssClass(day)" [innerText]="getDayBtnText(day)" [title]="day |json">
+            <button type="button" class="dp-calendar-day" *ngFor="let day of week" [attr.data-date]="day.date.format(componentConfig.format)" (click)="dayClicked(day)" [disabled]="day.disabled" [ngClass]="getDayBtnCssClass(day)" [innerText]="getDayBtnText(day)" [title]="getDayBtnTitle(day)">
       </button>
         </div>
         <div class="dp-footer-container">
@@ -19,8 +19,8 @@
                 <div class="col-md-6">
                     <button class="btn btn-link dp-btn-link " (click)="goToCurrent(weeks)">Today</button>
                 </div>
-                <div class="col-md-6">
-                    <button class="btn btn-primary dp-close-btn" (click)="closebtn()">Close</button>
+                <div class="col-md-6" style="padding-right:20px;">
+                    <button class="btn btn-primary dp-close-btn" style="float:right;" (click)="closebtn()">Close</button>
                 </div>
             </div>
         </div>
