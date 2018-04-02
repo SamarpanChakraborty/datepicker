@@ -18,8 +18,8 @@
                         [placeholder]="placeholder" (onChange)="log($event)" />
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary" type="button">
-                        <img src="./assets/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
-                      </button>
+              <img src="./assets/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;" />
+            </button>
                     </div>
                 </div>
             </div>
@@ -39,8 +39,8 @@
             <h3 class="dp-options-section">Attribute options</h3>
             <div class="dp-option" *ngIf="isValidConfig('theme')">
                 <span class="dp-option-header">
-        Theme (theme | for example the built in material theme - dp-material):
-      </span>
+          Theme (theme | for example the built in material theme - dp-material):
+        </span>
                 <div class="dp-option-playground">
                     <label>Material Theme
             <input id="themeOn" type="radio" [(ngModel)]="material" name="style" [value]="true">
@@ -53,8 +53,8 @@
 
             <div class="dp-option" *ngIf="isValidConfig('disabled')">
                 <span class="dp-option-header">
-        Disabled (disabled):
-      </span>
+          Disabled (disabled):
+        </span>
                 <div class="dp-option-playground">
                     <label>Enabled
             <input id="inputEnabledRadio" type="radio" [(ngModel)]="disabled" name="disabled" [value]="false">
@@ -64,29 +64,10 @@
           </label>
                 </div>
             </div>
-
-            <div class="dp-option" *ngIf="isValidConfig('required')">
-                <span class="dp-option-header">
-        Required Validation (required):
-      </span>
-                <div class="dp-option-playground">
-                    <label>Required
-            <input id="enableRequiredRadio" type="radio" [(ngModel)]="required" (ngModelChange)="validatorsChanged()"
-                   name="required" [value]="true">
-          </label>
-                    <label>Not Required
-            <input id="disableRequiredRadio" type="radio" [(ngModel)]="required" (ngModelChange)="validatorsChanged()"
-                   name="required" [value]="false">
-          </label>
-                </div>
-            </div>
-
-
-
             <div class="dp-option" *ngIf="isValidConfig('placeholder')">
                 <span class="dp-option-header">
-        Placeholder (placeholder):
-      </span>
+          Placeholder (placeholder):
+        </span>
                 <div class="dp-option-playground">
                     <input id="placeholderInput" type="text" placeholder="Put a placeholder" [(ngModel)]="placeholder" />
                 </div>
@@ -143,20 +124,11 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Single
-            <input id="disableMultiselect"
-                   type="radio"
-                   [(ngModel)]="config.allowMultiSelect"
-                   name="allowMultiSelect"
-                   [value]="false"
-                   (ngModelChange)="configChanged('allowMultiSelect', 'single')">
+            <input id="disableMultiselect" type="radio" [(ngModel)]="config.allowMultiSelect" name="allowMultiSelect" [value]="false"
+              (ngModelChange)="configChanged('allowMultiSelect', 'single')">
           </label>
                     <label>Multiple
-            <input id="enableMultiselect"
-                   type="radio"
-                   [(ngModel)]="config.allowMultiSelect"
-                   name="allowMultiSelect"
-                   [value]="true"
-                   (ngModelChange)="configChanged('allowMultiSelect', 'multiple')">
+            <input id="enableMultiselect" type="radio" [(ngModel)]="config.allowMultiSelect" name="allowMultiSelect" [value]="true" (ngModelChange)="configChanged('allowMultiSelect', 'multiple')">
           </label>
                 </div>
             </div>
@@ -167,19 +139,10 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Close
-            <input id="closeOnSelect"
-                   type="radio"
-                   [(ngModel)]="config.closeOnSelect"
-                   name="closeOnSelect"
-                   [value]="true"
-                   (ngModelChange)="configChanged('closeOnSelect', 'true')">
+            <input id="closeOnSelect" type="radio" [(ngModel)]="config.closeOnSelect" name="closeOnSelect" [value]="true" (ngModelChange)="configChanged('closeOnSelect', 'true')">
           </label>
                     <label>Don't Close
-            <input id="noCloseOnSelect"
-                   type="radio"
-                   [(ngModel)]="config.closeOnSelect" name="closeOnSelect"
-                   [value]="false"
-                   (ngModelChange)="configChanged('closeOnSelect', 'false')">
+            <input id="noCloseOnSelect" type="radio" [(ngModel)]="config.closeOnSelect" name="closeOnSelect" [value]="false" (ngModelChange)="configChanged('closeOnSelect', 'false')">
           </label>
                 </div>
             </div>
@@ -199,20 +162,10 @@
         </span>
                 <div class="dp-option-playground">
                     <label>No
-            <input id="noOpenOnFocus"
-                   type="radio"
-                   [(ngModel)]="config.openOnFocus"
-                   name="openOnFocus"
-                   [value]="false"
-                   (ngModelChange)="configChanged('openOnFocus', 'false')">
+            <input id="noOpenOnFocus" type="radio" [(ngModel)]="config.openOnFocus" name="openOnFocus" [value]="false" (ngModelChange)="configChanged('openOnFocus', 'false')">
           </label>
                     <label>Yes
-            <input id="yesOpenOnFocus"
-                   type="radio"
-                   [(ngModel)]="config.openOnFocus"
-                   name="openOnFocus"
-                   [value]="true"
-                   (ngModelChange)="configChanged('openOnFocus', 'true')">
+            <input id="yesOpenOnFocus" type="radio" [(ngModel)]="config.openOnFocus" name="openOnFocus" [value]="true" (ngModelChange)="configChanged('openOnFocus', 'true')">
           </label>
                 </div>
             </div>
@@ -223,20 +176,10 @@
         </span>
                 <div class="dp-option-playground">
                     <label>No
-            <input id="noOpenOnClick"
-                   type="radio"
-                   [(ngModel)]="config.openOnClick"
-                   name="openOnClick"
-                   [value]="false"
-                   (ngModelChange)="configChanged('openOnClick', 'false')">
+            <input id="noOpenOnClick" type="radio" [(ngModel)]="config.openOnClick" name="openOnClick" [value]="false" (ngModelChange)="configChanged('openOnClick', 'false')">
           </label>
                     <label>Yes
-            <input id="yesOpenOnClick"
-                   type="radio"
-                   [(ngModel)]="config.openOnClick"
-                   name="openOnClick"
-                   [value]="true"
-                   (ngModelChange)="configChanged('openOnClick', 'true')">
+            <input id="yesOpenOnClick" type="radio" [(ngModel)]="config.openOnClick" name="openOnClick" [value]="true" (ngModelChange)="configChanged('openOnClick', 'true')">
           </label>
                 </div>
             </div>
@@ -265,15 +208,10 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Disabled
-            <input type="radio"
-                   [(ngModel)]="config.disableKeypress"
-                   name="disableKeypress"
-                   [value]="true"
-                   (ngModelChange)="configChanged('disableKeypress', 'true')">
+            <input type="radio" [(ngModel)]="config.disableKeypress" name="disableKeypress" [value]="true" (ngModelChange)="configChanged('disableKeypress', 'true')">
           </label>
                     <label>Enabled
-            <input type="radio" [(ngModel)]="config.disableKeypress" name="disableKeypress" [value]="false"
-                   (ngModelChange)="configChanged('disableKeypress', 'false')">
+            <input type="radio" [(ngModel)]="config.disableKeypress" name="disableKeypress" [value]="false" (ngModelChange)="configChanged('disableKeypress', 'false')">
           </label>
                 </div>
             </div>
@@ -284,25 +222,13 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Down
-            <input type="radio"
-                   [(ngModel)]="config.drops"
-                   name="drops"
-                   value="down"
-                   (ngModelChange)="configChanged('drops', 'down')">
+            <input type="radio" [(ngModel)]="config.drops" name="drops" value="down" (ngModelChange)="configChanged('drops', 'down')">
           </label>
                     <label>Up
-            <input type="radio"
-                   [(ngModel)]="config.drops"
-                   name="drops"
-                   value="up"
-                   (ngModelChange)="configChanged('drops', 'up')">
+            <input type="radio" [(ngModel)]="config.drops" name="drops" value="up" (ngModelChange)="configChanged('drops', 'up')">
           </label>
                     <label>Auto
-            <input type="radio"
-                   [(ngModel)]="config.drops"
-                   name="drops"
-                   value="null"
-                   (ngModelChange)="configChanged('drops', null)">
+            <input type="radio" [(ngModel)]="config.drops" name="drops" value="null" (ngModelChange)="configChanged('drops', null)">
           </label>
                 </div>
             </div>
@@ -313,25 +239,13 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Right
-            <input type="radio"
-                   [(ngModel)]="config.opens"
-                   name="opens"
-                   value="right"
-                   (ngModelChange)="configChanged('opens', 'right')">
+            <input type="radio" [(ngModel)]="config.opens" name="opens" value="right" (ngModelChange)="configChanged('opens', 'right')">
           </label>
                     <label>Left
-            <input type="radio"
-                   [(ngModel)]="config.opens"
-                   name="opens"
-                   value="left"
-                   (ngModelChange)="configChanged('opens', 'left')">
+            <input type="radio" [(ngModel)]="config.opens" name="opens" value="left" (ngModelChange)="configChanged('opens', 'left')">
           </label>
                     <label>Auto
-            <input type="radio"
-                   [(ngModel)]="config.opens"
-                   name="opens"
-                   value="null"
-                   (ngModelChange)="configChanged('opens', null)">
+            <input type="radio" [(ngModel)]="config.opens" name="opens" value="null" (ngModelChange)="configChanged('opens', null)">
           </label>
                 </div>
             </div>
@@ -342,20 +256,12 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Hidden
-            <input type="radio"
-                   id="hideInputRadio"
-                   [(ngModel)]="config.hideInputContainer"
-                   name="hideInputContainer"
-                   [value]="true"
-                   (ngModelChange)="configChanged('hideInputContainer', 'hidden')">
+            <input type="radio" id="hideInputRadio" [(ngModel)]="config.hideInputContainer" name="hideInputContainer" [value]="true"
+              (ngModelChange)="configChanged('hideInputContainer', 'hidden')">
           </label>
                     <label>Shown
-            <input type="radio"
-                   id="showInputRadio"
-                   [(ngModel)]="config.hideInputContainer"
-                   name="hideInputContainer"
-                   [value]="false"
-                   (ngModelChange)="configChanged('hideInputContainer', 'shown')">
+            <input type="radio" id="showInputRadio" [(ngModel)]="config.hideInputContainer" name="hideInputContainer" [value]="false"
+              (ngModelChange)="configChanged('hideInputContainer', 'shown')">
           </label>
                 </div>
             </div>
@@ -367,19 +273,12 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Show
-            <input id="showNearMonthDaysRadio"
-                   type="radio"
-                   [(ngModel)]="config.showNearMonthDays"
-                   name="showNearMonthDays"
-                   [value]="true"
-                   (ngModelChange)="configChanged('showNearMonthDays', 'true')">
+            <input id="showNearMonthDaysRadio" type="radio" [(ngModel)]="config.showNearMonthDays" name="showNearMonthDays" [value]="true"
+              (ngModelChange)="configChanged('showNearMonthDays', 'true')">
           </label>
                     <label>Hide
-            <input id="hideNearMonthDaysRadio"
-                   type="radio"
-                   [(ngModel)]="config.showNearMonthDays"
-                   name="showNearMonthDays" [value]="false"
-                   (ngModelChange)="configChanged('showNearMonthDays', 'false')">
+            <input id="hideNearMonthDaysRadio" type="radio" [(ngModel)]="config.showNearMonthDays" name="showNearMonthDays" [value]="false"
+              (ngModelChange)="configChanged('showNearMonthDays', 'false')">
           </label>
                 </div>
             </div>
@@ -390,20 +289,12 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Show
-            <input id="showWeekNumbersRadio"
-                   type="radio"
-                   [(ngModel)]="config.showWeekNumbers"
-                   name="showWeekNumbers"
-                   [value]="true"
-                   (ngModelChange)="configChanged('showWeekNumbers', 'true')">
+            <input id="showWeekNumbersRadio" type="radio" [(ngModel)]="config.showWeekNumbers" name="showWeekNumbers" [value]="true"
+              (ngModelChange)="configChanged('showWeekNumbers', 'true')">
           </label>
                     <label>Hide
-            <input id="hideWeekNumbersRadio"
-                   type="radio"
-                   [(ngModel)]="config.showWeekNumbers"
-                   name="showWeekNumbers"
-                   [value]="false"
-                   (ngModelChange)="configChanged('showWeekNumbers', 'false')">
+            <input id="hideWeekNumbersRadio" type="radio" [(ngModel)]="config.showWeekNumbers" name="showWeekNumbers" [value]="false"
+              (ngModelChange)="configChanged('showWeekNumbers', 'false')">
           </label>
                 </div>
             </div>
@@ -414,20 +305,12 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Enabled
-            <input id="enableMonthSelector"
-                   type="radio"
-                   [(ngModel)]="config.enableMonthSelector"
-                   name="enableMonthSelector"
-                   [value]="true"
-                   (ngModelChange)="configChanged('enableMonthSelector', 'true')">
+            <input id="enableMonthSelector" type="radio" [(ngModel)]="config.enableMonthSelector" name="enableMonthSelector" [value]="true"
+              (ngModelChange)="configChanged('enableMonthSelector', 'true')">
           </label>
                     <label>Disabled
-            <input id="disableMonthSelector"
-                   type="radio"
-                   [(ngModel)]="config.enableMonthSelector"
-                   name="enableMonthSelector"
-                   [value]="false"
-                   (ngModelChange)="configChanged('enableMonthSelector', 'false')">
+            <input id="disableMonthSelector" type="radio" [(ngModel)]="config.enableMonthSelector" name="enableMonthSelector" [value]="false"
+              (ngModelChange)="configChanged('enableMonthSelector', 'false')">
           </label>
                 </div>
             </div>
@@ -447,20 +330,10 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Enabled
-            <input id="showGoToCurrent"
-                   type="radio"
-                   [(ngModel)]="config.showGoToCurrent"
-                   name="showGoToCurrent"
-                   [value]="true"
-                   (ngModelChange)="configChanged('showGoToCurrent', 'true')">
+            <input id="showGoToCurrent" type="radio" [(ngModel)]="config.showGoToCurrent" name="showGoToCurrent" [value]="true" (ngModelChange)="configChanged('showGoToCurrent', 'true')">
           </label>
                     <label>Disabled
-            <input id="hideGoToCurrent"
-                   type="radio"
-                   [(ngModel)]="config.showGoToCurrent"
-                   name="showGoToCurrent"
-                   [value]="false"
-                   (ngModelChange)="configChanged('showGoToCurrent', 'false')">
+            <input id="hideGoToCurrent" type="radio" [(ngModel)]="config.showGoToCurrent" name="showGoToCurrent" [value]="false" (ngModelChange)="configChanged('showGoToCurrent', 'false')">
           </label>
                 </div>
             </div>
@@ -471,20 +344,12 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Enabled
-            <input id="hideOnOutsideClick"
-                   type="radio"
-                   [(ngModel)]="config.hideOnOutsideClick"
-                   name="hideOnOutsideClick"
-                   [value]="true"
-                   (ngModelChange)="configChanged('hideOnOutsideClick', 'true')">
+            <input id="hideOnOutsideClick" type="radio" [(ngModel)]="config.hideOnOutsideClick" name="hideOnOutsideClick" [value]="true"
+              (ngModelChange)="configChanged('hideOnOutsideClick', 'true')">
           </label>
                     <label>Disabled
-            <input id="showOnOutsideClick"
-                   type="radio"
-                   [(ngModel)]="config.hideOnOutsideClick"
-                   name="hideOnOutsideClick"
-                   [value]="false"
-                   (ngModelChange)="configChanged('hideOnOutsideClick', 'false')">
+            <input id="showOnOutsideClick" type="radio" [(ngModel)]="config.hideOnOutsideClick" name="hideOnOutsideClick" [value]="false"
+              (ngModelChange)="configChanged('hideOnOutsideClick', 'false')">
           </label>
                 </div>
             </div>
@@ -495,20 +360,10 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Enabled
-            <input id="enableUnSelect"
-                   type="radio"
-                   [(ngModel)]="config.unSelectOnClick"
-                   name="unSelectOnClick"
-                   [value]="true"
-                   (ngModelChange)="configChanged('unSelectOnClick', 'true')">
+            <input id="enableUnSelect" type="radio" [(ngModel)]="config.unSelectOnClick" name="unSelectOnClick" [value]="true" (ngModelChange)="configChanged('unSelectOnClick', 'true')">
           </label>
                     <label>Disabled
-            <input id="disableUnSelect"
-                   type="radio"
-                   [(ngModel)]="config.unSelectOnClick"
-                   name="unSelectOnClick"
-                   [value]="false"
-                   (ngModelChange)="configChanged('showGoToCurrent', 'false')">
+            <input id="disableUnSelect" type="radio" [(ngModel)]="config.unSelectOnClick" name="unSelectOnClick" [value]="false" (ngModelChange)="configChanged('showGoToCurrent', 'false')">
           </label>
                 </div>
             </div>
@@ -600,20 +455,10 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Enabled
-            <input id="showSeconds"
-                   type="radio"
-                   [(ngModel)]="config.showSeconds"
-                   name="showSeconds"
-                   [value]="true"
-                   (ngModelChange)="configChanged('showSeconds', 'true')">
+            <input id="showSeconds" type="radio" [(ngModel)]="config.showSeconds" name="showSeconds" [value]="true" (ngModelChange)="configChanged('showSeconds', 'true')">
           </label>
                     <label>Disabled
-            <input id="hideSeconds"
-                   type="radio"
-                   [(ngModel)]="config.showSeconds"
-                   name="showSeconds"
-                   [value]="false"
-                   (ngModelChange)="configChanged('showSeconds', 'false')">
+            <input id="hideSeconds" type="radio" [(ngModel)]="config.showSeconds" name="showSeconds" [value]="false" (ngModelChange)="configChanged('showSeconds', 'false')">
           </label>
                 </div>
             </div>
@@ -624,20 +469,12 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Enabled
-            <input id="showTwentyFourHours"
-                   type="radio"
-                   [(ngModel)]="config.showTwentyFourHours"
-                   name="showTwentyFourHours"
-                   [value]="true"
-                   (ngModelChange)="configChanged('showTwentyFourHours', 'true')">
+            <input id="showTwentyFourHours" type="radio" [(ngModel)]="config.showTwentyFourHours" name="showTwentyFourHours" [value]="true"
+              (ngModelChange)="configChanged('showTwentyFourHours', 'true')">
           </label>
                     <label>Disabled
-            <input id="hideTwentyFourHours"
-                   type="radio"
-                   [(ngModel)]="config.showTwentyFourHours"
-                   name="showTwentyFourHours"
-                   [value]="false"
-                   (ngModelChange)="configChanged('showTwentyFourHours', 'false')">
+            <input id="hideTwentyFourHours" type="radio" [(ngModel)]="config.showTwentyFourHours" name="showTwentyFourHours" [value]="false"
+              (ngModelChange)="configChanged('showTwentyFourHours', 'false')">
           </label>
                 </div>
             </div>
@@ -657,20 +494,12 @@
         </span>
                 <div class="dp-option-playground">
                     <label>Enabled
-            <input id="showMultipleYearsNavigation"
-                   type="radio"
-                   [(ngModel)]="config.showMultipleYearsNavigation"
-                   name="showMultipleYearsNavigation"
-                   [value]="true"
-                   (ngModelChange)="configChanged('showMultipleYearsNavigation', 'true')">
+            <input id="showMultipleYearsNavigation" type="radio" [(ngModel)]="config.showMultipleYearsNavigation" name="showMultipleYearsNavigation"
+              [value]="true" (ngModelChange)="configChanged('showMultipleYearsNavigation', 'true')">
           </label>
                     <label>Disabled
-            <input id="hideMultipleYearsNavigation"
-                   type="radio"
-                   [(ngModel)]="config.showMultipleYearsNavigation"
-                   name="showMultipleYearsNavigation"
-                   [value]="false"
-                   (ngModelChange)="configChanged('showMultipleYearsNavigation', 'false')">
+            <input id="hideMultipleYearsNavigation" type="radio" [(ngModel)]="config.showMultipleYearsNavigation" name="showMultipleYearsNavigation"
+              [value]="false" (ngModelChange)="configChanged('showMultipleYearsNavigation', 'false')">
           </label>
                 </div>
             </div>
